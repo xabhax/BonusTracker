@@ -13,7 +13,7 @@ namespace BonusTracker
         private void CalculateGross(object sender, EventArgs e)
         { 
             // Do some checking of the input
-            if (hourlywage.Text.Length != 0 && hoursone.Text.Length != 0 && hourstwo.Text.Length != 0 && hoursthree.Text.Length != 0 && hoursfour.Text.Length != 0)
+            if (hoursone.Text.Length != 0 && hourstwo.Text.Length != 0 && hoursthree.Text.Length != 0 && hoursfour.Text.Length != 0)
             {
                 // Setup variables
                 int BonusWeekOne = 0;
@@ -31,7 +31,6 @@ namespace BonusTracker
                 decimal CalculatedGross = 0;
 
                 // Parse input so we can use it
-                decimal HourlyWage = decimal.Parse(hourlywage.Text);
                 decimal WeekOneHours = decimal.Parse(hoursone.Text);
                 decimal WeekTwoHours = decimal.Parse(hourstwo.Text);
                 decimal WeekThreeHours = decimal.Parse(hoursthree.Text);
