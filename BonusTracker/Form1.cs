@@ -57,7 +57,7 @@ namespace BonusTracker
                     tmpWeekFour = WeekFourHours - 50;
                 }
 
-                // Check hours for tiers of bonuses (week one)
+                // Check hours for tiers of bonuses
                 if (BonusWeekOne == 1)
                 {
                     if (tmpWeekOne <= 10) { HourlyMultiplierWeekOne = 0.50M; }
@@ -86,10 +86,10 @@ namespace BonusTracker
                     else if (tmpWeekFour <= 30) { HourlyMultiplierWeekFour = 1.50M; }
                     else { HourlyMultiplierWeekFour = 2.00M; }
                 }
-                // Calculate temp gross
+                // Calculate bonus
                 CalculatedGross = (tmpWeekOne * HourlyMultiplierWeekOne) + (tmpWeekTwo * HourlyMultiplierWeekTwo) + (tmpWeekThree * HourlyMultiplierWeekThree) + (tmpWeekFour * HourlyMultiplierWeekFour);
 
-                // Show the gross calculated wage
+                // Show the bonus
                calculatedbonus.Text = CalculatedGross.ToString();
             } 
 
